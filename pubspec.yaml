@@ -28,6 +28,8 @@ dependencies:
   dio:
   shared_preferences:
   flutter_webview_plugin:
+  flutter_staggered_grid_view:
+  cached_network_image:
 
 dev_dependencies:
   flutter_test:

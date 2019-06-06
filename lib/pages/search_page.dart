@@ -122,7 +122,7 @@ class _SearchPageState extends State<SearchPage> {
         break;
       }
     }
-    return 'images/type_${path}.png';
+    return 'images/type_$path.png';
   }
 
   _title(SearchItem item) {

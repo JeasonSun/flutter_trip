@@ -6,6 +6,7 @@ import 'package:xiecheng/widget/webview.dart';
 
 class SalesBox extends StatelessWidget {
   final SalesBoxModel salesBox;
+  bool notNull(Object o) => o != null;
 
   const SalesBox({Key key, this.salesBox}) : super(key: key);
 
@@ -42,7 +43,7 @@ class SalesBox extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                   ),
                 )
-              ],
+              ].where(notNull).toList(),
             ),
             decoration: BoxDecoration(
                 border: Border(

@@ -13,10 +13,11 @@ class LoadingContainer extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final Widget emptyWidget = Container(width: 0, height: 0);
     return !cover
         ? !isLoading ? child : _loadingView
         : Stack(
-            children: <Widget>[child, isLoading ? _loadingView : null],
+            children: <Widget>[child, isLoading ? _loadingView : emptyWidget],
           );
   }
 
