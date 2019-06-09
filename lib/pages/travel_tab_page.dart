@@ -89,6 +89,7 @@ class _TravelTabPageState extends State<TravelTabPage> {
           widget.type,
           pageIndex,
           PAGE_SIZE);
+      _loading = false;
 
       if (this.mounted) {
         setState(() {
@@ -98,16 +99,16 @@ class _TravelTabPageState extends State<TravelTabPage> {
           } else {
             travelItems = items;
           }
-          _loading = false;
         });
       }
     } catch (e) {
       print(e);
-      if (this.mounted) {
-        setState(() {
-          _loading = false;
-        });
-      }
+      _loading = false;
+      // if (this.mounted) {
+      //   setState(() {
+
+      //   });
+      // }
     }
   }
 
